@@ -31,6 +31,15 @@ A **Mascots** foi criada como parte do programa da **SOFTEX Pernambuco**. Nosso 
 - **Sessões claras:** Divida o README em partes compreensíveis.
 - **Markdown bem utilizado:** Cabeçalhos, listas e código foram organizados de forma legível.
 
+---
+
+## 📸 **Screenshots**
+
+🐶 Tela de login
 ![alt text](image.png)
+
+📋 Tela de visualiação de exames
 ![alt text](image-1.png)
+
+🐾 Tela de visualização de pets cadastrados
 ![alt text](image-2.png)
