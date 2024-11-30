@@ -53,8 +53,11 @@ export function ExamesContent() {
   }
 
   const [examesArray, setExamesArray] = useState<Exame[]>(() => {
-    const saveExames = localStorage.getItem("examesArray");
-    return saveExames ? JSON.parse(saveExames) : []; // Se não houver dados, retorna array vazio
+    if (typeof window !== "undefined") {
+      const saveExames = localStorage.getItem("examesArray");
+
+      return saveExames ? JSON.parse(saveExames) : []; // Se não houver dados, retorna array vazio
+    }
   });
 
   useEffect(() => {
