@@ -180,7 +180,9 @@ export function ExamesContent() {
                           />
                         ))
                     ) : (
-                      <p>Nenhum exame encontrado</p>
+                      <p className="text-white font-semibold">
+                        Nenhum exame encontrado
+                      </p>
                     ) // Ou outra mensagem de erro
                   ) : Array.isArray(arrayFilter) && arrayFilter.length > 0 ? (
                     [...arrayFilter]
@@ -197,7 +199,9 @@ export function ExamesContent() {
                         />
                       ))
                   ) : (
-                    <p>Nenhum exame encontrado</p>
+                    <p className="text-white font-semibold">
+                      Nenhum exame encontrado
+                    </p>
                   ) // Ou outra mensagem de erro
                 }
               </div>

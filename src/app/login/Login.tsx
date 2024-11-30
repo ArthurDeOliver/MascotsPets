@@ -3,6 +3,7 @@
 import type { MouseEventHandler } from "react";
 import { InputComponent } from "../components/InputComponent";
 import { LoginPageButton } from "../components/LoginPageButton";
+import { LogoForms } from "./LogoForms";
 // import { LogoLogin } from "../components/LogoLogin";
 
 interface loginProps {
@@ -23,7 +24,7 @@ export function Login({
       }`}
     >
       <div className="flex flex-col items-center gap-4">
-        {/* <LogoLogin /> */}
+        <LogoForms />
         <header className="text-mascots-primary-700 font-montserrat font-semibold text-xl">
           Login
         </header>
