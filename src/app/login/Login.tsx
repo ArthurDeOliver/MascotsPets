@@ -22,7 +22,7 @@ export function Login({
         !forgotPasswordButtonState ? "opacity-100" : "opacity-0 hidden"
       }`}
     >
-      <div className="flex w-full flex-col items-center gap-4">
+      <div className="flex w-full justify-center flex-col items-center gap-4">
         <LogoForms />
         <header className="text-mascots-primary-700 font-montserrat font-semibold text-xl">
           Login
