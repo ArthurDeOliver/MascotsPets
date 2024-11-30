@@ -3,7 +3,7 @@
 import type { MouseEventHandler } from "react";
 import { InputComponent } from "../components/InputComponent";
 import { LoginPageButton } from "../components/LoginPageButton";
-import { LogoLogin } from "../components/LogoLogin";
+// import { LogoLogin } from "../components/LogoLogin";
 
 interface loginProps {
   handleForgotPassword: MouseEventHandler;
@@ -23,7 +23,7 @@ export function Login({
       }`}
     >
       <div className="flex flex-col items-center gap-4">
-        <LogoLogin />
+        {/* <LogoLogin /> */}
         <header className="text-mascots-primary-700 font-montserrat font-semibold text-xl">
           Login
         </header>

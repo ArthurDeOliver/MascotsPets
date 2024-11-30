@@ -5,8 +5,9 @@ import { useState } from "react";
 import { Sigin } from "./Sigin";
 import { ForgotPassword } from "./ForgotPassword";
 import { Login } from "./Login";
+import Image from "next/image";
 
-export function LoginPage() {
+export default function LoginPage() {
   const [forgotPasswordButtonState, setforgotPasswordButtonState] =
     useState(false);
 
@@ -45,7 +46,7 @@ export function LoginPage() {
               !siginButtonState ? "z-10" : "z-30 left-1/2"
             }`}
           >
-            <img className="h-full w-full" src={imgLogin1.src} />
+            <Image alt="login" className="h-full w-full" src={imgLogin1.src} />
           </div>
 
           <Login

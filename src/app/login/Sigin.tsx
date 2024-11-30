@@ -2,7 +2,6 @@
 
 import { GoArrowLeft } from "react-icons/go";
 import { InputComponent } from "../components/InputComponent";
-import { LoginPageButton } from "../components/LoginPageButton";
 import type { MouseEventHandler } from "react";
 import { LogoForms } from "./LogoForms";
 

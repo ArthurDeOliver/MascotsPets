@@ -163,8 +163,27 @@ export function ExamesContent() {
                 </div>
               </div>
               <div className="flex bg-exames-color-600 rounded-md overflow-y-scroll p-4 gap-6 w-full flex-wrap max-h-96">
-                {activeSearch.trim() === ""
-                  ? [...examesArray]
+                {
+                  activeSearch.trim() === "" ? (
+                    Array.isArray(examesArray) && examesArray.length > 0 ? (
+                      [...examesArray]
+                        .reverse()
+                        .map((exames) => (
+                          <ExameCard
+                            onclick={() => handlePetCardClick(exames)}
+                            key={exames.id}
+                            petName={exames.petName}
+                            dataExame={exames.data}
+                            tutorName={exames.tutorCpf}
+                            typeExame={exames.tipo}
+                            veterinarianName={exames.veterinario.name}
+                          />
+                        ))
+                    ) : (
+                      <p>Nenhum exame encontrado</p>
+                    ) // Ou outra mensagem de erro
+                  ) : Array.isArray(arrayFilter) && arrayFilter.length > 0 ? (
+                    [...arrayFilter]
                       .reverse()
                       .map((exames) => (
                         <ExameCard
@@ -177,20 +196,12 @@ export function ExamesContent() {
                           veterinarianName={exames.veterinario.name}
                         />
                       ))
-                  : [...arrayFilter]
-                      .reverse()
-                      .map((exames) => (
-                        <ExameCard
-                          onclick={() => handlePetCardClick(exames)}
-                          key={exames.id}
-                          petName={exames.petName}
-                          dataExame={exames.data}
-                          tutorName={exames.tutorCpf}
-                          typeExame={exames.tipo}
-                          veterinarianName={exames.veterinario.name}
-                        />
-                      ))}
+                  ) : (
+                    <p>Nenhum exame encontrado</p>
+                  ) // Ou outra mensagem de erro
+                }
               </div>
+
               <ExamesInfo
                 bottomDivRef={bottomDivRef}
                 exameSelect={exameSelect}

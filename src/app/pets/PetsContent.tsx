@@ -35,17 +35,24 @@ export function PetsContent() {
   const [visualizarPets, setVisualizarPets] = useState(true);
   const [cadastrarPet, setCadastrarPet] = useState(false);
 
-  // const [petsArray, setPetsArray] = useState<Pet[]>([]);
-  const [petsArray, setPetsArray] = useState<Pet[]>(() => {
-    //pets array: pets cadastrados no sistema
-    //localstorage só aceita string
-    const savePets = localStorage.getItem("petsArray"); //salvando o array no local storage (dentro do navegador)
-    return savePets ? JSON.parse(savePets) : []; // se existir savePets, gerar um json de savePets caso contrário, retorne array vazio
-  });
+  // Inicializa o petsArray no lado do cliente
+  const [petsArray, setPetsArray] = useState<Pet[]>([]);
+
+  // Efetua a leitura do localStorage somente no cliente
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const savePets = localStorage.getItem("petsArray");
+      if (savePets) {
+        setPetsArray(JSON.parse(savePets));
+      }
+    }
+  }, []);
 
   useEffect(() => {
-    // Salva o petsArray no local storage sempre que ele é atualizado
-    localStorage.setItem("petsArray", JSON.stringify(petsArray));
+    // Salva o petsArray no localStorage sempre que ele for atualizado
+    if (typeof window !== "undefined") {
+      localStorage.setItem("petsArray", JSON.stringify(petsArray));
+    }
   }, [petsArray]);
 
   function handleVisualizarPets() {
@@ -108,7 +115,7 @@ export function PetsContent() {
         width="w-64"
       />
 
-      <div className="flex w-full h-fit flex-col relative ">
+      <div className="flex w-full h-fit flex-col relative">
         <MainContent zIndex="z-40" visualize={visualizarPets}>
           <div className="flex flex-col gap-14">
             <div className="flex flex-col gap-4">
@@ -160,8 +167,9 @@ export function PetsContent() {
               </div>
 
               <div className="flex bg-pets-color-300 rounded-md overflow-y-scroll p-4 gap-6 w-full flex-wrap max-h-96">
-                {activeSearch.trim() === ""
-                  ? [...petsArray]
+                {activeSearch.trim() === "" ? (
+                  Array.isArray(petsArray) && petsArray.length > 0 ? (
+                    [...petsArray]
                       .reverse()
                       .map((pets) => (
                         <PetCard
@@ -175,20 +183,27 @@ export function PetsContent() {
                           name={pets.name}
                         />
                       ))
-                  : [...arrayFilter]
-                      .reverse()
-                      .map((pets) => (
-                        <PetCard
-                          onclick={() => handlePetCardClick(pets)}
-                          gender={pets.gender}
-                          specie={pets.species}
-                          tutorName={pets.tutor.name}
-                          key={pets.id}
-                          age={pets.age}
-                          breed={pets.breed}
-                          name={pets.name}
-                        />
-                      ))}
+                  ) : (
+                    <p>Nenhum pet encontrado</p>
+                  )
+                ) : Array.isArray(arrayFilter) && arrayFilter.length > 0 ? (
+                  [...arrayFilter]
+                    .reverse()
+                    .map((pets) => (
+                      <PetCard
+                        onclick={() => handlePetCardClick(pets)}
+                        gender={pets.gender}
+                        specie={pets.species}
+                        tutorName={pets.tutor.name}
+                        key={pets.id}
+                        age={pets.age}
+                        breed={pets.breed}
+                        name={pets.name}
+                      />
+                    ))
+                ) : (
+                  <p>Nenhum pet encontrado</p>
+                )}
               </div>
               <PetInfo bottomDivRef={bottomDivRef} petSelect={petSelect} />
             </div>
