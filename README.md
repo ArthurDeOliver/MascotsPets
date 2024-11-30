@@ -33,7 +33,7 @@ A **Mascots** foi criada como parte do programa da **SOFTEX Pernambuco**. Nosso 
 
 ---
 
-## 📸 Screenshots
+### 📸 Screenshots
 
 - 🐶 Tela de login
   ![alt text](image.png)
