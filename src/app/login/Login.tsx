@@ -4,7 +4,6 @@ import type { MouseEventHandler } from "react";
 import { InputComponent } from "../components/InputComponent";
 import { LoginPageButton } from "../components/LoginPageButton";
 import { LogoForms } from "./LogoForms";
-// import { LogoLogin } from "../components/LogoLogin";
 
 interface loginProps {
   handleForgotPassword: MouseEventHandler;
@@ -23,7 +22,7 @@ export function Login({
         !forgotPasswordButtonState ? "opacity-100" : "opacity-0 hidden"
       }`}
     >
-      <div className="flex flex-col items-center gap-4">
+      <div className="flex w-full flex-col items-center gap-4">
         <LogoForms />
         <header className="text-mascots-primary-700 font-montserrat font-semibold text-xl">
           Login

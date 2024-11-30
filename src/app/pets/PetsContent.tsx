@@ -184,7 +184,9 @@ export function PetsContent() {
                         />
                       ))
                   ) : (
-                    <p>Nenhum pet encontrado</p>
+                    <p className="text-white font-semibold">
+                      Nenhum pet encontrado
+                    </p>
                   )
                 ) : Array.isArray(arrayFilter) && arrayFilter.length > 0 ? (
                   [...arrayFilter]
@@ -202,7 +204,9 @@ export function PetsContent() {
                       />
                     ))
                 ) : (
-                  <p>Nenhum pet encontrado</p>
+                  <p className="text-white font-semibold">
+                    Nenhum pet encontrado
+                  </p>
                 )}
               </div>
               <PetInfo bottomDivRef={bottomDivRef} petSelect={petSelect} />
