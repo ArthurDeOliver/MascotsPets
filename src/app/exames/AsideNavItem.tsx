@@ -26,8 +26,8 @@ export function AsideNavItem({
       <div
         className={`${
           !hover
-            ? "opacity-0 text-nowrap max-w-0"
-            : "opacity-100 text-nowrap max-w-full"
+            ? "hidden text-nowrap max-w-0"
+            : "opacity-100 text-nowrap gap-0 max-w-full"
         } text-base font-medium transition-all duration-300 text-nowrap overflow-hidden `}
       >
         {text}
