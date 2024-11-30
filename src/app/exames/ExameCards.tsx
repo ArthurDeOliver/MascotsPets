@@ -6,9 +6,7 @@ import { FaClipboardList } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 
-import { TbGenderMale } from "react-icons/tb";
-
-import type { MouseEventHandler, ReactEventHandler } from "react";
+import type { MouseEventHandler } from "react";
 
 interface ExameCardProps {
   veterinarianName: string | undefined;

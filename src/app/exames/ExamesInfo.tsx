@@ -1,20 +1,12 @@
 "use client";
 
-import { useState, type LegacyRef } from "react";
+import { type LegacyRef } from "react";
 import Image from "next/image";
 import exames from "../assets/images/exames.png";
 
 interface Veterinario {
   name: string;
   crv: string;
-  id: string;
-}
-
-interface Pet {
-  name: string;
-  age: number;
-  species: string;
-  breed: string;
   id: string;
 }
 

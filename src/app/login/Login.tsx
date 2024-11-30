@@ -32,8 +32,18 @@ export function Login({
         method="post"
         className="flex flex-col justify-center mt-3 gap-4 w-72 "
       >
-        <InputComponent id="login" placeholder="Login" type="text" />
-        <InputComponent id="pass" placeholder="Senha" type="password" />
+        <InputComponent
+          id="login"
+          placeholder="Login"
+          type="text"
+          value={undefined}
+        />
+        <InputComponent
+          id="pass"
+          placeholder="Senha"
+          type="password"
+          value={undefined}
+        />
 
         <LoginPageButton text="Entrar" />
       </form>

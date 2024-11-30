@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from "uuid";
 import { SelectExamType } from "./SelectExamType";
 import { SelectPet } from "./SelectPet";
 import { TextArea } from "./TextArea";
-import { IoMdAddCircle } from "react-icons/io";
 import { FaClipboard } from "react-icons/fa";
 
 interface Tutor {

@@ -12,24 +12,6 @@ import { InputComponent } from "../components/InputComponent";
 import { ExameCard } from "./ExameCards";
 import { ExamesInfo } from "./ExamesInfo";
 
-interface Tutor {
-  name: string;
-  phone: string;
-  cpf: string;
-  address: string;
-}
-
-interface Pet {
-  id: string;
-  name: string;
-  age: string;
-  gender: string;
-  species: string;
-  breed: string;
-  condition: string;
-  tutor: Tutor;
-}
-
 interface Exame {
   veterinario: Veterinario;
   tipo: string;

@@ -5,12 +5,27 @@ export function FormsLogin() {
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <form className="flex flex-col gap-4 p-4 bg-white shadow-md rounded-md">
         <div className="flex flex-col">
-          <InputComponent id="name" label="Login" type="name" />
+          <InputComponent
+            id="name"
+            label="Login"
+            type="name"
+            value={undefined}
+          />
         </div>
 
         <div className="flex flex-col">
-          <InputComponent id="pass" label="Senha" type="password" />
-          <InputComponent id="text" label="Texto props" type="text" />
+          <InputComponent
+            id="pass"
+            label="Senha"
+            type="password"
+            value={undefined}
+          />
+          <InputComponent
+            id="text"
+            label="Texto props"
+            type="text"
+            value={undefined}
+          />
         </div>
 
         <button

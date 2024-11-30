@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type MouseEventHandler } from "react";
+import { type MouseEventHandler } from "react";
 
 interface AsideNavItemProps {
   icon: JSX.Element;

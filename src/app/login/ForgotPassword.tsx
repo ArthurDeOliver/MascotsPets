@@ -3,7 +3,6 @@
 import { GoArrowLeft } from "react-icons/go";
 import { InputComponent } from "../components/InputComponent";
 import { LoginPageButton } from "../components/LoginPageButton";
-import { LogoLogin } from "../components/LogoLogin";
 import type { MouseEventHandler } from "react";
 import { LogoForms } from "./LogoForms";
 
@@ -37,14 +36,21 @@ export function ForgotPassword({
             id="newPassword"
             placeholder="Nova Senha"
             type="password"
+            value={undefined}
           />
 
           <InputComponent
             id="confirmNewPassword"
             placeholder="Confirmar Nova Senha"
             type="password"
+            value={undefined}
           />
-          <InputComponent id="confirmEmail" placeholder="Email" type="email" />
+          <InputComponent
+            id="confirmEmail"
+            placeholder="Email"
+            type="email"
+            value={undefined}
+          />
           <LoginPageButton text="Nova Senha" />
         </form>
       </div>

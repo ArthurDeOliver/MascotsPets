@@ -1,9 +1,8 @@
 "use client";
 
-import { FaPaw, FaBell, FaRegUserCircle } from "react-icons/fa";
-import { FaUserDoctor } from "react-icons/fa6";
+import { FaPaw, FaRegUserCircle } from "react-icons/fa";
+
 import { MdAssignment } from "react-icons/md";
-import { FiActivity, FiBox } from "react-icons/fi";
 
 import logo from "../assets/images/icon.png";
 
@@ -19,13 +18,7 @@ interface HeaderPageProps {
   pets?: boolean;
 }
 
-export function HeaderPage({
-  consutas,
-  exames,
-  internato,
-  pets,
-  recursos,
-}: HeaderPageProps) {
+export function HeaderPage({ exames, pets }: HeaderPageProps) {
   return (
     <header className=" font-roboto bg-white text-gray-800 h-20 p-6 flex justify-between items-center ">
       <div className="flex items-center space-x-2">
@@ -34,20 +27,6 @@ export function HeaderPage({
 
       <nav className="w-full">
         <ul className="flex gap-8 justify-center">
-          <li className="group flex items-center">
-            <Link
-              href="/consultas"
-              className={`${
-                consutas
-                  ? "bg-mascots-primary-600 text-white"
-                  : "bg-transparent text-gray-800"
-              } flex items-center space-x-2 py-2 px-4 rounded-full transition-all duration-200 group-hover:bg-mascots-primary-800 group-hover:shadow-lg group-hover:shadow-mascots-primary-800 group-hover:text-white`}
-            >
-              <FaUserDoctor size={24} />
-              <span>Consultas</span>
-            </Link>
-          </li>
-
           <li className="group flex items-center">
             <Link
               href="/exames"
@@ -59,20 +38,6 @@ export function HeaderPage({
             >
               <MdAssignment size={24} />
               <span>Exames</span>
-            </Link>
-          </li>
-
-          <li className="group flex items-center">
-            <Link
-              href="/recursos"
-              className={`${
-                recursos
-                  ? "bg-recursos-color-600 text-white"
-                  : "bg-transparent text-gray-800"
-              } flex items-center space-x-2 py-2 px-4 rounded-full transition-all duration-200 group-hover:bg-recursos-color-800 group-hover:shadow-lg group-hover:shadow-recursos-color-800 group-hover:text-white`}
-            >
-              <FiBox size={24} />
-              <span>Recursos</span>
             </Link>
           </li>
 

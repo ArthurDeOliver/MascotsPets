@@ -8,7 +8,7 @@ import { LuDog } from "react-icons/lu";
 import { CgGenderFemale } from "react-icons/cg";
 import { TbGenderMale } from "react-icons/tb";
 import { LuCat } from "react-icons/lu";
-import type { MouseEventHandler, ReactEventHandler } from "react";
+import type { MouseEventHandler } from "react";
 
 interface petCardProps {
   name: string;

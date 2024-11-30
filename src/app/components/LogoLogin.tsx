@@ -1,9 +1,10 @@
+import Image from "next/image";
 import logo from "../assets/images/Logo.png";
 
 export function LogoLogin() {
   return (
     <div>
-      <img src={logo.src} />
+      <Image alt="logo" src={logo.src} />
     </div>
   );
 }

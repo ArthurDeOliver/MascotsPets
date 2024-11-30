@@ -28,16 +28,32 @@ export function Sigin({ propsSigin }: siginProps) {
             Cadastro
           </header>
           <form className="flex flex-col w-2/3 gap-3 justify-center">
-            <InputComponent id="login" placeholder="Login" type="text" />
+            <InputComponent
+              id="login"
+              placeholder="Login"
+              type="text"
+              value={undefined}
+            />
 
-            <InputComponent id="password" placeholder="Senha" type="password" />
+            <InputComponent
+              id="password"
+              placeholder="Senha"
+              type="password"
+              value={undefined}
+            />
 
             <InputComponent
               id="confirmPassword"
               placeholder="Confirmar Senha"
               type="password"
+              value={undefined}
             />
-            <InputComponent id="email" placeholder="Email" type="email" />
+            <InputComponent
+              id="email"
+              placeholder="Email"
+              type="email"
+              value={undefined}
+            />
             <div className="w-full mt-2">
               <LoginPageButton text="Cadastrar" />
             </div>

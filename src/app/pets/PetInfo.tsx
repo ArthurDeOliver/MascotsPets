@@ -10,7 +10,7 @@ import pataBgGato from "../assets/images/pataBgGato.png";
 import dogProfile from "../assets/images/dogProfile.png";
 import catProfile from "../assets/images/gato.png";
 import { FaUserDoctor } from "react-icons/fa6";
-import { useRef, useState, type LegacyRef } from "react";
+import { type LegacyRef } from "react";
 import Image from "next/image";
 import lupaPet from "..//assets/images/lupaPet.png";
 
