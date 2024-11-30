@@ -1,3 +1,4 @@
+"use client";
 import logo from "../assets/images/Logo.png";
 
 export function LogoLogin() {

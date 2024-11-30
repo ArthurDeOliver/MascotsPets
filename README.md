@@ -30,3 +30,7 @@ A **Mascots** foi criada como parte do programa da **SOFTEX Pernambuco**. Nosso 
 - **Visual amigável:** Use emojis para tornar o conteúdo mais atraente.
 - **Sessões claras:** Divida o README em partes compreensíveis.
 - **Markdown bem utilizado:** Cabeçalhos, listas e código foram organizados de forma legível.
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)

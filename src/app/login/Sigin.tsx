@@ -55,7 +55,9 @@ export function Sigin({ propsSigin }: siginProps) {
               value={undefined}
             />
             <div className="w-full mt-2">
-              <LoginPageButton text="Cadastrar" />
+              <button className="py-2 font-roboto text-center bg-mascots-primary-600 rounded-xl w-full text-white  hover:bg-mascots-primary-800 active:bg-mascots-primary-500 transition-all">
+                Cadastrar
+              </button>
             </div>
           </form>
         </div>
