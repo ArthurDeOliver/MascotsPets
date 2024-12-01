@@ -211,29 +211,6 @@ export function PetInfo({ petSelect, bottomDivRef }: PetInfoProps) {
             </>
           )}
         </div>
-        <div className="w-full flex justify-around gap-10 mt-5">
-          <Link
-            href={"/consultas"}
-            className="px-5 py-3 flex items-center gap-1 bg-mascots-primary-700 hover:bg-mascots-primary-800 hover:scale-105 max-w-fit text-white rounded-md font-semibold transition-all"
-          >
-            <FaUserDoctor size={24} />
-            Marcar Consulta
-          </Link>
-          <Link
-            href={"/exames"}
-            className="px-5 py-3 flex items-center gap-1 bg-exames-color-700 hover:bg-exames-color-800 hover:scale-105 max-w-fit text-white rounded-md font-semibold transition-all"
-          >
-            <FaClipboardList size={24} />
-            Prescrever Exame
-          </Link>
-          <Link
-            href={"/internato"}
-            className="px-5 py-3 bg-internato-color-700 hover:bg-internato-color-800 flex items-center gap-1 hover:scale-105 max-w-fit text-white rounded-md font-semibold transition-all"
-          >
-            <TbActivityHeartbeat size={24} />
-            Internamento
-          </Link>
-        </div>
       </div>
     </div>
   );
