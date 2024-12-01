@@ -41,7 +41,7 @@ export function AsidePets({
     <aside
       onMouseEnter={handleHoverIn}
       onMouseLeave={handleHoverOut}
-      className={`bg-pets-color-600 inset-0 px-3 font-roboto py-4 rounded-xl h-fit shadow-custom sticky top-5 transition-all w-20 hover:${width}`}
+      className={`bg-pets-color-600 inset-0 px-3 font-roboto py-4 rounded-xl h-fit shadow-custom sticky top-5 transition-all w-20 ${isHover ? width : "w-20"}`}
     >
       <nav className="flex gap-2 h-full items-center">
         <div className="transition-all flex flex-col gap-5 h-full justify-around w-full items-start">

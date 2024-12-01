@@ -20,7 +20,7 @@ export function AsideNavItem({
   return (
     <button
       onClick={onClick}
-      className={`${isAcess ? "p-4 rounded-full flex items-center gap-2 hover:bg-pets-color-500 transition-all bg-mascots-secundary-50" : "p-4 rounded-full flex items-center gap-2 hover:bg-pets-color-800 transition-all text-white active:bg-pets-color-500 active:text-black"} `}
+      className={`${isAcess ? "p-4 text-nowrap rounded-full flex items-center gap-2 hover:bg-pets-color-800 hover:text-white transition-all bg-mascots-secundary-50" : "p-4 rounded-full flex items-center gap-2 hover:bg-pets-color-800 transition-all text-white active:bg-pets-color-500 active:text-black"} `}
     >
       {icon}
       <div
