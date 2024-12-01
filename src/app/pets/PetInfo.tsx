@@ -1,15 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { CgGenderFemale } from "react-icons/cg";
-import { FaUser, FaClipboardList } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { LuDog, LuCat } from "react-icons/lu";
-import { TbGenderMale, TbActivityHeartbeat } from "react-icons/tb";
+import { TbGenderMale } from "react-icons/tb";
 import pataBgDog from "../assets/images/pataBgDog.png";
 import pataBgGato from "../assets/images/pataBgGato.png";
 import dogProfile from "../assets/images/dogProfile.png";
 import catProfile from "../assets/images/gato.png";
-import { FaUserDoctor } from "react-icons/fa6";
 import { type LegacyRef } from "react";
 import Image from "next/image";
 import lupaPet from "..//assets/images/lupaPet.png";
